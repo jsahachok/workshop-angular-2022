@@ -39,3 +39,9 @@ Name3 (2-way binding) : <input type="text" [(ngModel)]="name">
 <div *ngFor="let item of names">
   {{item.id}} => {{item.name}}
 </div>
+
+<h3>##################################</h3>
+<h3> Use pipes uppercase</h3>
+<div *ngFor="let item of names">
+  {{item.id}} => {{item.name | uppercase}}
+</div>
