@@ -17,5 +17,17 @@ NickName : <input type="text" #inputNickName (input)="doNickname(inputNickName.v
 
 Name2 : <input type="text" [value]="name" #inputName (input)="doSth2(inputName.value)">
 
-<p>Please enter your nickname</p>
+<p>Please enter your name</p>
 <p>Hi, {{name}}</p>
+
+
+<h3>##################################</h3>
+
+Name3 (2-way binding) : <input type="text" [(ngModel)]="name">
+
+<input type="text" [(ngModel)]="name" />
+<input type="text" [ngModel]="name" (ngModelChange)="name=$event" />
+
+<p>Please enter your name</p>
+<p>Hi, {{name}}</p>
+
