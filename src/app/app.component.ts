@@ -6,30 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello123';
-  name = '';
-  names;
-  nickname = '';
-
-  constructor(){
-    this.names = [
-      {id:1,name:'Sahachok'},
-      {id:2,name:'Boat'},
-    ]
-  }
+  parentName = {id:1,name:'Sahachok'};
 
 
-  doSth(event: Event){
-    let val = (event.target as HTMLInputElement).value;
-    this.name = val;
-  }
-
-  doSth2(name: string){
-    this.name = name;
-  }
-
-  doNickname(nickname : string){
-    console.log(nickname);
-    this.nickname = nickname;
-  }
 }
