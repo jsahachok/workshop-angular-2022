@@ -6,3 +6,16 @@ Name : <input type="text" (input)="doSth($event)">
 
 <p>Please enter your name</p>
 <p>Hi, {{name}}</p>
+
+<h3>##################################</h3>
+NickName : <input type="text" #inputNickName (input)="doNickname(inputNickName.value)">
+
+<p>Please enter your nickname</p>
+<p>Hi, {{nickname}}</p>
+
+<h3>##################################</h3>
+
+Name2 : <input type="text" [value]="name" #inputName (input)="doSth2(inputName.value)">
+
+<p>Please enter your nickname</p>
+<p>Hi, {{name}}</p>
