@@ -11,8 +11,17 @@ export class UserComponent implements OnInit {
 
   constructor(private route: Router,private userService: UserService) { }
 
+  results: any;
   ngOnInit(): void {
-    this.userService.getAllUser();
+    this.userService.getAllUser().subscribe({
+      next: data =>{
+        console.log(data)
+        this.results = data;
+      },
+      error: err =>{
+        console.log(err)
+      }
+    })
   }
 
   backtoMain(){

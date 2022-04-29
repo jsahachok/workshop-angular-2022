@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
-const URL = 'https://jsonplaceholder.typicode.com/users';
+const URL = 'https://jsonplaceholder.typicode.com';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +11,10 @@ const URL = 'https://jsonplaceholder.typicode.com/users';
 
 export class UserService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getAllUser(){
+  getAllUser(): Observable<any>{
     console.log("Called getAllUser")
+    return this.http.get(URL+'/users')
   }
 }
