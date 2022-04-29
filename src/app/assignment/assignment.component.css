@@ -1,0 +1,11 @@
+.btn:hover{
+  cursor: pointer;
+}
+
+.like{
+  background-color: #0d6efd;
+}
+
+.dislike{
+  background-color: #dc3545;
+}

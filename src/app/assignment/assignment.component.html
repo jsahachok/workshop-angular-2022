@@ -1,0 +1,13 @@
+<div class="col-md-12" style="padding: 2% 2% 0 2%;">
+  <h2 style="padding-bottom: 2%;">Assignment</h2>
+  <div class="row" style="padding-left: 10%;">
+    <div class="col-md-2">
+      <button [ngClass]="like == true?'like':''" class="btn btn-secondary btn-lg" (click)="likeBtn()">Like | {{likeCount}}</button>
+
+    </div>
+    <div class="col-md-3">
+      <button [ngClass]="dislike == true?'dislike':''" class="btn btn-secondary btn-lg" (click)="dislikeBtn()">Dislike | {{dislikeCount}}</button>
+
+    </div>
+  </div>
+</div>
