@@ -4,8 +4,8 @@
 
 Name : <input type="text" (input)="doSth($event)">
 
-<p>Please enter your name</p>
-<p>Hi, {{name}}</p>
+<p *ngIf="!name">Please enter your name</p>
+<p *ngIf="name">Hi, {{name}}</p>
 
 <h3>##################################</h3>
 NickName : <input type="text" #inputNickName (input)="doNickname(inputNickName.value)">
@@ -28,6 +28,6 @@ Name3 (2-way binding) : <input type="text" [(ngModel)]="name">
 <input type="text" [(ngModel)]="name" />
 <input type="text" [ngModel]="name" (ngModelChange)="name=$event" />
 
-<p>Please enter your name</p>
-<p>Hi, {{name}}</p>
+<p *ngIf="name ; else showDefaultMessage">Hi, {{name}}</p>
 
+<ng-template #showDefaultMessage><p>Please enter your name</p></ng-template>
