@@ -8,7 +8,8 @@ import { User } from './models/user';
 })
 export class AppComponent {
   // parentName = {id:1,name:'Sahachok'};
-  parentName = new User(1, 'Sahachok')
+  // parentName = new User(1, 'Sahachok')
+  parentName: User = {id:1, name:'Sahachok'};
 
   onResponse(response: User){
     console.log("On response in parent");
