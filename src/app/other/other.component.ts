@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OtherComponent implements OnInit {
 
-  @Input() name = {};
+  @Input() name:any;
   constructor() { }
 
   ngOnInit(): void {
