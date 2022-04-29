@@ -31,3 +31,11 @@ Name3 (2-way binding) : <input type="text" [(ngModel)]="name">
 <p *ngIf="name ; else showDefaultMessage">Hi, {{name}}</p>
 
 <ng-template #showDefaultMessage><p>Please enter your name</p></ng-template>
+
+
+<h3>##################################</h3>
+<h3> Use ngFor</h3>
+
+<div *ngFor="let item of names">
+  {{item.id}} => {{item.name}}
+</div>

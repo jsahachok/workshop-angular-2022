@@ -8,7 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello123';
   name = '';
+  names;
   nickname = '';
+
+  constructor(){
+    this.names = [
+      {id:1,name:'Sahachok'},
+      {id:2,name:'Boat'},
+    ]
+  }
+
+
   doSth(event: Event){
     let val = (event.target as HTMLInputElement).value;
     this.name = val;
