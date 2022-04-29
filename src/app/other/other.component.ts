@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-other',
@@ -7,8 +8,8 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class OtherComponent implements OnInit {
 
-  @Input() name:any;
-  @Output() changeNameEvent = new EventEmitter<any>();
+  @Input() name!:User;
+  @Output() changeNameEvent = new EventEmitter<User>();
 
   constructor() { }
 
